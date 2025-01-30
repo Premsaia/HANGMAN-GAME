@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HANGMAN GAME</title>
+    <link rel="stylesheet" href="hangman.css">
+    <script src="words.js"></script>
+</head>
+<body>
+    <div class="titleBlock">
+        <h1>HANGMAN GAME</h1>
+    </div>
+    <div class="mainBlock">
+
+        <div class="lose">
+            <div class="wrapper">
+                <img src="./images/lost.gif" alt="lose" id="loseImage">
+                <h1 id="loseTag">YOU LOSE</h1>
+                <p id="loseWord"></p>
+                <button id="losePlayAgain" class="playAgain" onclick="playAgain()">PLAY AGAIN</button>
+            </div>
+        </div>
+        <div class="win">
+            <div class="wrapper">
+                <img src="./images/victory.gif" alt="lose" id="loseImage">
+                <h1 id="loseTag">CONGRATS !</h1>
+                <p id="loseWord">you found the word : <span id="winnerWord"></span></p>
+                <button id="winPlayAgain" class="playAgain" onclick="playAgain()">PLAY AGAIN</button>
+            </div>
+        </div>
+
+        <div class="imageBlock">
+            <img src="./images/hangman-0.svg" alt="hangman" class="imagesource" id="imagesource">
+        </div>
+
+        <div class="textBlock">
+
+            <ul class="word">
+            </ul>
+            
+            <span id="hintId">HINT : </span>
+            <span class="hint"></span>
+            <p class="incorrect">INCORRECT ATTEMPTS  =<span id="attempts">0 / 6</span></p>
+
+            <div class="keyboard">
+
+            </div>
+        </div>
+
+    </div>
+
+    <script src="hangman.js"></script>
+</body>
+</html>
